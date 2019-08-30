@@ -4,6 +4,29 @@ This is a collection of [IPython notebook](http://ipython.org/notebook.html)/[Ju
 notebooks intended to train the reader on different [Apache Spark](http://spark.apache.org/) concepts, from 
 basic to advanced, by using the **Python** language.  
 
+## Installation on Mac
+Reference: 
+https://towardsdatascience.com/how-to-get-started-with-pyspark-1adc142456ec 
+
+Verified compatibility for new version of relevant packages:    
+Pyspark: spark-2.4.3-bin-hadoop2.s7.tgz
+Form terminal to unzip the spark: 
+tar -xzf spark-2.4.3-bin-hadoop2.7.tgz
+mv spark-2.4.3-bin-hadoop2.7 ~/spark243
+
+Java: Regist on Oracel and download and install Java version 1.8
+
+Add lines below to ~/.bash_profile:
+ln -s ~/spark243 ~/spark
+export JAVA_HOME=$(/usr/libexec/java_home)
+export SPARK_HOME=~/spark
+export PATH=$SPARK_HOME/bin:$PATH
+export PYSPARK_PYTHON=python3
+
+export PYSPARK_DRIVER_PYTHON=jupyter
+export PYSPARK_DRIVER_PYTHON_OPTS=‘notebook'
+From terminal to launch Jupyter notebook with PySpark:
+	$> pypark
 
 ## Instructions  
 
